@@ -1,6 +1,4 @@
-@import "./config";
-@import "./fonts";
-@import "./animation";
+@import "./config", "./fonts", "./animation";
 
 body {
   background-color: $color-Yellow;
@@ -10,13 +8,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .card {
   background-color: $color-White;
   padding: $space-300;
   width: 0;
   height: 0;
-
+  margin: auto;
   border-radius: 20px;
   display: flex;
   flex-direction: column;

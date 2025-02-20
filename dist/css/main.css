@@ -60,7 +60,7 @@ body {
     box-shadow: 8px 8px 0 rgb(0, 0, 0), 0 0 0 #ffffff, 0 0 0 #cccccc inset, 2px 2px 2px #ffffff inset;
   }
   100% {
-    width: 384px;
+    width: clamp(327px, 40vw, 384px);
     height: auto;
     background: #fafafa;
     box-shadow: 8px 8px 0 rgb(0, 0, 0);
@@ -92,6 +92,7 @@ body {
   padding: 1.5rem;
   width: 0;
   height: 0;
+  margin: auto;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -124,21 +125,21 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 4px;
-  font-size: 0.875rem;
+  font-size: clamp(12px, 1.25vw, 14px);
   font-weight: 900;
 }
 .card__date {
-  font-size: 0.875rem;
+  font-size: clamp(12px, 1.25vw, 14px);
   font-weight: normal;
 }
 .card__title {
-  font-size: 1.5rem;
+  font-size: clamp(20px, 2.5vw, 24px);
   font-weight: 900;
   transition: 0.3s ease-in;
 }
 .card__description {
   color: #6b6b6b;
-  font-size: 1rem;
+  font-size: clamp(14px, 1.5vw, 16px);
   font-weight: normal;
 }
 .card__author {
@@ -154,7 +155,7 @@ body {
   overflow: hidden;
 }
 .card__author-name {
-  font-size: 0.875rem;
+  font-size: clamp(12px, 1.25vw, 14px);
   font-weight: 900;
 }
 .card:hover .card__title {
