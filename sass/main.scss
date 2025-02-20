@@ -14,15 +14,20 @@ body {
 .card {
   background-color: $color-White;
   padding: $space-300;
-  max-width: 384px;
+  width: 0;
+  height: 0;
+
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: $space-300;
-  box-shadow: 8px 8px 0 rgba(0, 0, 0);
   cursor: pointer;
-  transition: 0.5s ease-in;
+  overflow: hidden;
+  box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 10px 10px 10px #cccccc inset,
+    -10px -10px 10px #ffffff inset;
+  animation: intro-animation 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
+  animation-fill-mode: forwards;
 
   &__image {
     width: 100%;
@@ -30,12 +35,15 @@ body {
     border-radius: 10px;
     margin-bottom: $space-150;
     overflow: hidden;
+    animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
   }
 
   &__content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: $space-150;
+    animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
   }
   &__category {
     background-color: $color-Yellow;
@@ -60,6 +68,7 @@ body {
     display: flex;
     gap: $space-150;
     align-items: center;
+    animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
 
     &-avatar {
       width: 32px;
@@ -73,7 +82,6 @@ body {
   }
 
   &:hover {
-    box-shadow: 12px 12px 0 rgba(0, 0, 0);
     .card__title {
       color: $color-Yellow;
     }

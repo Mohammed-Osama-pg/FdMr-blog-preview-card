@@ -34,6 +34,50 @@ body {
   font-weight: medium;
   font-style: normal;
 }
+@keyframes intro-animation {
+  0% {
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 10px 10px 10px #cccccc inset, -10px -10px 10px #ffffff inset;
+  }
+  25% {
+    width: 60px;
+    height: 60px;
+    background: #f8f8f8;
+    box-shadow: 10px 10px 0 rgb(0, 0, 0), 10px 10px 10px #cccccc, 0 0 0 #cccccc inset, 0 0 0 #ffffff inset;
+  }
+  50% {
+    width: 60px;
+    height: 522px;
+    background: #f8f8f8;
+    box-shadow: 10px 10px 0 rgb(0, 0, 0), 10px 10px 10px #cccccc, 0 0 0 #cccccc inset, 0 0 0 #ffffff inset;
+  }
+  98% {
+    width: 384px;
+    height: auto;
+    background: #fafafa;
+    box-shadow: 8px 8px 0 rgb(0, 0, 0), 0 0 0 #ffffff, 0 0 0 #cccccc inset, 2px 2px 2px #ffffff inset;
+  }
+  100% {
+    width: 384px;
+    height: auto;
+    background: #fafafa;
+    box-shadow: 8px 8px 0 rgb(0, 0, 0);
+  }
+}
+@keyframes showup {
+  0% {
+    width: 336px;
+  }
+  50% {
+    opacity: 0;
+    width: 336px;
+  }
+  98% {
+    width: 336px;
+  }
+}
 body {
   background-color: #f4d04e;
   width: 100vw;
@@ -46,15 +90,18 @@ body {
 .card {
   background-color: #ffffff;
   padding: 1.5rem;
-  max-width: 384px;
+  width: 0;
+  height: 0;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-  box-shadow: 8px 8px 0 rgb(0, 0, 0);
   cursor: pointer;
-  transition: 0.5s ease-in;
+  overflow: hidden;
+  box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 10px 10px 10px #cccccc inset, -10px -10px 10px #ffffff inset;
+  animation: intro-animation 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
+  animation-fill-mode: forwards;
 }
 .card__image {
   width: 100%;
@@ -62,11 +109,14 @@ body {
   border-radius: 10px;
   margin-bottom: 0.75rem;
   overflow: hidden;
+  animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
 }
 .card__content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
 }
 .card__category {
   background-color: #f4d04e;
@@ -95,6 +145,7 @@ body {
   display: flex;
   gap: 0.75rem;
   align-items: center;
+  animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
 }
 .card__author-avatar {
   width: 32px;
@@ -105,9 +156,6 @@ body {
 .card__author-name {
   font-size: 0.875rem;
   font-weight: 900;
-}
-.card:hover {
-  box-shadow: 12px 12px 0 rgb(0, 0, 0);
 }
 .card:hover .card__title {
   color: #f4d04e;
