@@ -1,24 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Figtree";
-  font-size: 16px;
-  line-height: 1.5rem;
-}
-
 @font-face {
   font-family: "Figtree";
-  src: url("../../assets/fonts/Figtree-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../../assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 100 900;
   font-style: italic;
 }
 @font-face {
   font-family: "Figtree";
-  src: url("../../assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  src: url("../../assets/fonts/Figtree-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
@@ -33,4 +23,21 @@ body {
   src: url("../../assets/fonts/static/Figtree-Medium.ttf") format("truetype");
   font-weight: medium;
   font-style: normal;
-}/*# sourceMappingURL=main.css.map */
+}
+
+@mixin text-preset-1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+@mixin text-preset-2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+@mixin text-preset-3 {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+@mixin text-preset-4 {
+  font-size: 0.875rem;
+  font-weight: 900;
+}
