@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [The solution URL here](https://github.com/Mohammed-Osama-pg/FdMr-blog-preview-card.git)
-- Live Site URL: [The live site URL here](https://your-live-site-url.com)
+- [The solution URL here](https://github.com/Mohammed-Osama-pg/FdMr-blog-preview-card.git)
+- [The live site URL here](https://mohammed-osama-pg.github.io/FdMr-blog-preview-card/)
 
 ## My process
 
