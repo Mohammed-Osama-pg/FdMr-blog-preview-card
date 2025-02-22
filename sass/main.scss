@@ -9,10 +9,13 @@ body {
   align-items: center;
 }
 .card {
+  width: clamp(327px, 40vw, 384px);
+  height: auto;
+  background: #fafafa;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0);
+
   background-color: $color-White;
   padding: $space-300;
-  width: 0;
-  height: 0;
   margin: auto;
   border-radius: 20px;
   display: flex;
@@ -21,9 +24,8 @@ body {
   gap: $space-300;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 10px 10px 10px #cccccc inset,
-    -10px -10px 10px #ffffff inset;
-  animation: intro-animation 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
+  animation: intro-animation 4s cubic-bezier(0.16, 1, 0.3, 1) 2s 2
+    alternate-reverse;
   animation-fill-mode: forwards;
 
   &__image {
@@ -32,7 +34,8 @@ body {
     border-radius: 10px;
     margin-bottom: $space-150;
     overflow: hidden;
-    animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
+    animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2s 2 alternate-reverse;
+    animation-fill-mode: forwards;
   }
 
   &__content {
@@ -40,7 +43,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: $space-150;
-    animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
+    animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2s 2 alternate-reverse;
+    animation-fill-mode: forwards;
   }
   &__category {
     background-color: $color-Yellow;
@@ -65,7 +69,8 @@ body {
     display: flex;
     gap: $space-150;
     align-items: center;
-    animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2.1s alternate;
+    animation: showup 4s cubic-bezier(0.16, 1, 0.3, 1) 2s 2 alternate-reverse;
+    animation-fill-mode: forwards;
 
     &-avatar {
       width: 32px;
